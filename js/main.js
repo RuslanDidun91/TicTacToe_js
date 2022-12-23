@@ -49,7 +49,32 @@ function init() {
     render();
 }
 
+function handleClick(event) {
+    //find value been clicked by user
+    // const index = parseInt(event.target.id.replace('cl-', ''));
+    const index = parseInt(event.target.id[3]);
+    // console.log(index)
+    if (isNaN(index) || gameBoard[index] || winner) return;
+    gameBoard[index] = turn;
+    turn *= -1;
+    winner = checkWinner();
+    render();
+}
+
+function checkWinner() {
+    for (let i = 0; i < winState.length; i++) {
+        if (Math.abs(gameBoard[winState[i][0]] +
+            gameBoard[winState[i][1]] +
+            gameBoard[winState[i][2]]) === 3)
+            return gameBoard[winState[i][0]];
+    }
+    if (gameBoard.includes(null)) return null;
+    return 'T';
+}
 
 
+function render() {
+    
+}
 
 
