@@ -30,17 +30,24 @@ let turn; // 1 or -1
 let winner; //null - no winner; 1 or -1 winner; 'T' - tie
 
 /*--  cached elements --*/
+const messageEL = document.querySelector('h1');
+const playBtn = document.querySelector('button');
+//shortcut for messageEl
 
-
-//shortcut for messageEL
 
 /*--  event listeners --*/
 //start game again
-
+playBtn.addEventListener('click', init);
+document.getElementById('cells').addEventListener('click', handleClick);
 /*-- functions  --*/
 init();
 
-
+function init() {
+    gameBoard = [null, null, null, null, null, null, null, null, null];
+    turn = 1;
+    winner = null;
+    render();
+}
 
 
 
