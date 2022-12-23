@@ -1,6 +1,6 @@
 
 
-### Check this cool app via [link 👈](https://ruslandidun.github.io/new-todoListProject/)
+### Check this cool app via [link 👈](https://ruslandidun91.github.io/TicTacToe_js/)
 <div id="description" align="center"> 
 
 ## :pencil: Description
